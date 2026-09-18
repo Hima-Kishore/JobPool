@@ -11,4 +11,8 @@ const __dirname = path.dirname(__filename);
 app.use(cors());
 app.use(express.json());
 
-app.listen(PORT, () => console.log(`Server is runnint at port ${PORT}`));
+app.get('/info', (req, res) => {
+    res.send("Job Pool site for IITBBS is under development");
+});
+
+app.listen(PORT, () => console.log(`Server is running at port ${PORT}`));
